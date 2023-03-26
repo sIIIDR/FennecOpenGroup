@@ -2,7 +2,7 @@
   "name": "fog-website",
   "version": "2.0.0",
   "license": "MIT",
-  "homepage": "https://sIIIDR.github.io/",
+  "homepage": "https://sIIIDR.github.io/FennecOpenGroup",
   "private": true,
   "scripts": {
     "start": "react-scripts start",
