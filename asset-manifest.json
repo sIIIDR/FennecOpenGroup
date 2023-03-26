@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0ecc2e2b.css",
-    "main.js": "/static/js/main.089a32c2.js",
+    "main.js": "/static/js/main.064798cc.js",
     "static/media/DimaSerafimov.jpg": "/static/media/DimaSerafimov.e39262787d6080c4bb5b.jpg",
     "static/media/KirillSidorenkov.jpg": "/static/media/KirillSidorenkov.424cee1373eeff0ccaf8.jpg",
     "static/media/chatsModal.png": "/static/media/chatsModal.79b5380658eb1e96a7f1.png",
@@ -26,10 +26,10 @@
     "static/media/roboto-slab-greek-ext-400-normal.woff2": "/static/media/roboto-slab-greek-ext-400-normal.b32338de250af5281d8e.woff2",
     "index.html": "/index.html",
     "main.0ecc2e2b.css.map": "/static/css/main.0ecc2e2b.css.map",
-    "main.089a32c2.js.map": "/static/js/main.089a32c2.js.map"
+    "main.064798cc.js.map": "/static/js/main.064798cc.js.map"
   },
   "entrypoints": [
     "static/css/main.0ecc2e2b.css",
-    "static/js/main.089a32c2.js"
+    "static/js/main.064798cc.js"
   ]
 }
