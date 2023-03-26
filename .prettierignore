@@ -1,0 +1,15 @@
+**/node_modules/
+**/__snapshots__/
+**/*.scss
+package*.json
+tsconfig.json
+public/
+build/
+nginx/
+.helm/
+.eslintignore
+.prettierignore
+*.svg
+*.png
+.gitignore
+src/assets/

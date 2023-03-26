@@ -1,0 +1,237 @@
+@import "./functions";
+@import "./variables";
+
+.shared-btn {
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  &:first-of-type {
+    margin-bottom: rem(20);
+  }
+}
+
+.shared-title {
+  display: inline;
+  margin: 0;
+  color: $black_100;
+  font-size: rem(24px);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.shared-title__with-margin {
+  @extend .shared-title;
+  display: block;
+  margin-bottom: rem(15px);
+}
+
+.shared-title__with-width {
+  @extend .shared-title__with-margin;
+  width: 100%;
+}
+
+.shared-title__with-margin_medium {
+  @extend .shared-title__with-margin;
+  margin-bottom: rem(25px);
+}
+
+.shared-section-title {
+  width: 100%;
+  color: $grey_1500;
+  font-size: rem(18px);
+  font-weight: 400;
+  margin-bottom: rem(20px);
+}
+
+.shared-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: rem(32px);
+}
+
+.shared-row__small-margin {
+  @extend .shared-row;
+  margin-bottom: rem(12px);
+  width: 100%;
+}
+
+.shared-flex {
+  display: flex;
+}
+
+.shared-field {
+  margin-right: rem(16);
+  width: 100%;
+  min-width: rem(225);
+}
+
+.shared-field_margin-bottom {
+  @extend .shared-field;
+  margin-bottom: rem(20px);
+}
+
+.shared-field-small {
+  margin-right: rem(16);
+  width: rem(225);
+  min-width: rem(225);
+}
+
+.shared-field-title {
+  min-width: rem(225);
+  width: rem(225);
+  margin-right: rem(16);
+}
+
+.shared-field-array {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: rem(15px);
+  width: 50%;
+}
+
+.shared-action-buttons {
+  position: sticky;
+  z-index: 1;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: rem(10px) 0 rem(15px);
+  background-color: $white;
+}
+
+.shared-action-cancel {
+  margin-left: rem(4px);
+}
+
+.shared-field-label {
+  color: $black_200;
+  font-size: rem(16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.42857143;
+}
+
+.shared-field-label_user-select {
+  @extend .shared-field-label;
+  user-select: none;
+}
+
+.shared-field-label_row {
+  @extend .shared-field-label;
+  flex: 0 1 auto;
+}
+
+.shared-label-block {
+  margin-bottom: rem(10px);
+}
+
+.shared-group-label {
+  color: $grey_1500;
+  font-size: rem(18px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.42857143;
+}
+
+.shared-group-label_margin {
+  @extend .shared-group-label;
+  margin-bottom: rem(19px);
+}
+
+.shared-group-label_margin-small {
+  @extend .shared-group-label;
+  margin-bottom: rem(10px);
+}
+
+.shared-group-label_row {
+  @extend .shared-group-label;
+  flex: 0 1 auto;
+}
+
+.shared-group-label_margin-top {
+  @extend .shared-group-label;
+  margin-top: rem(30px);
+}
+
+.shared-no-wrap-text {
+  white-space: nowrap;
+}
+
+.shared-group-margin {
+  margin-bottom: rem(10px);
+}
+
+.shared-group {
+  flex: 0 0 auto;
+  width: 100%;
+  margin-bottom: rem(10px);
+}
+
+.shared-field-row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.shared-field-row_padding {
+  @extend .shared-field-row;
+  padding: rem(10px) 0;
+}
+
+.shared-field-row_margin {
+  @extend .shared-field-row;
+  margin-top: rem(22px);
+}
+
+.shared-field-row_margin-small {
+  @extend .shared-field-row;
+  margin-top: rem(10px);
+}
+
+.shared-field-row-block {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  min-height: rem(36px);
+}
+
+.shared-field-row-block_width-small {
+  @extend .shared-field-row-block;
+  width: calc(24.1% - #{rem(23px * 0.241)});
+}
+
+.shared-field-row-block_width {
+  @extend .shared-field-row-block;
+  width: calc(50.86% - #{rem(24px * 0.5086)});
+}
+
+.shared-row-field {
+  flex: 1 1 0;
+  margin-left: rem(24px);
+  min-width: 0;
+}
+
+.shared-btn-add {
+  font-size: rem(14px);
+  font-style: normal;
+  font-weight: 400;
+  padding: rem(7px) rem(12px);
+}
+
+.shared-deleting-row {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.shared-deleting-row-btn {
+  flex: 0 0 auto;
+  margin: rem(10px) 0 0 rem(24px);
+}
+
+.shared-input-error {
+  color: $red;
+  font-size: rem(13px);
+  line-height: 1.42;
+}
