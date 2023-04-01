@@ -100,7 +100,7 @@ export const Team = React.memo(() => {
                 src={KirillSidorenkov}
                 name="Сидоренков Кирилл"
                 position="Основатель FOG"
-                stack={['Go', 'Kotlin', 'PHP', 'TS', 'HTML/CSS', 'ReactJS', 'VueJS']}
+                stack={['Go', 'Kotlin', 'PHP', 'TS', 'C++', 'ReactJS', 'VueJS', 'Python']}
                 city="Ульяновск"
                 country="Россия"
                 languages={['Русский', 'English']}

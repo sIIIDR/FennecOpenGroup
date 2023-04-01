@@ -12,12 +12,14 @@ import {
   Square,
   Text,
   Heading,
+  Stack,
 } from '@chakra-ui/react';
 import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons';
-import React, { Dispatch, useCallback, useState } from 'react';
+import { FaSearchPlus } from 'react-icons/fa';
+import React, { Dispatch, useCallback, useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { coreRemoveVisibleModal } from '../../actions/coreActions';
+import { coreRemoveVisibleModal, coreSetVisibleModal } from '../../actions/coreActions';
 import { RootActions } from '../../types/RootActions';
 import { ModalsEnum } from '../../enums/ModalsEnum';
 
@@ -29,6 +31,11 @@ interface IModalProductInfoProps {
 export const ModalProductInfo = React.memo(({ isOpen, productData }: IModalProductInfoProps) => {
   const dispatch = useDispatch<Dispatch<RootActions>>();
   const handleClose = useCallback(() => dispatch(coreRemoveVisibleModal(ModalsEnum.MAIN_PRODUCT_INFO)), []);
+  const handleImagesClick = useCallback(() => {
+    dispatch(coreRemoveVisibleModal(ModalsEnum.MAIN_PRODUCT_INFO));
+    dispatch(coreSetVisibleModal(ModalsEnum.MAIN_IMAGES));
+  }, []);
+  const iconRef = useRef<HTMLDivElement>(null);
 
   const [image, setImage] = useState(0);
 
@@ -40,19 +47,38 @@ export const ModalProductInfo = React.memo(({ isOpen, productData }: IModalProdu
         <ModalBody p={2}>
           <VStack w="full" my={[2, 4, 6, 8]} py={6}>
             <HStack w="full" h="full" align="center" justify="center">
-              <Image
-                src={productData.images[image]}
-                alt="FOG"
-                loading="lazy"
-                w="full"
-                h="full"
-                htmlWidth="full"
-                htmlHeight="full"
-                borderRadius="20px"
-                objectFit="cover"
-                srcSet={`${productData.images[image]}, ${productData.images[image]}, ${productData.images[image]}`}
-                sizes="(max-width: 300px) 300px, (max-width: 768px) 768px, 1280px"
-              />
+              <VStack>
+                <VStack ref={iconRef}>
+                  <Image
+                    src={productData.images[image]}
+                    alt="FOG"
+                    loading="lazy"
+                    w="full"
+                    h="full"
+                    htmlWidth="full"
+                    htmlHeight="full"
+                    borderRadius="20px"
+                    objectFit="cover"
+                    cursor="pointer"
+                    srcSet={`${productData.images[image]}, ${productData.images[image]}, ${productData.images[image]}`}
+                    sizes="(max-width: 300px) 300px, (max-width: 768px) 768px, 1280px"
+                  />
+                </VStack>
+                <Stack
+                  color="transparent"
+                  _hover={{ color: 'brand.orange' }}
+                  position="absolute"
+                  cursor="pointer"
+                  w={iconRef.current ? iconRef.current.children[0].clientWidth : 'auto'}
+                  h={iconRef.current ? iconRef.current.children[0].clientHeight : 'auto'}
+                  transitionDuration="0.3s"
+                  align="center"
+                  justify="center"
+                  onClick={handleImagesClick}
+                >
+                  <FaSearchPlus size="35px" />
+                </Stack>
+              </VStack>
             </HStack>
             <VStack>
               <HStack>

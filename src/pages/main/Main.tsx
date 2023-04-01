@@ -23,6 +23,7 @@ import chatsModal from '../../assets/darkchat/chatsModal.png';
 import menu from '../../assets/darkchat/menu.png';
 import menuHover from '../../assets/darkchat/menuHover.png';
 import { ROUTE_CONTACTS } from '../../constants/routes';
+import { ModalImages } from '../../components/modals/ModalImages';
 
 export const Main = React.memo(() => {
   const { height } = useWindowDimensions();
@@ -89,6 +90,7 @@ export const Main = React.memo(() => {
   const handleProductInfoClick = useCallback(() => dispatch(coreSetVisibleModal(ModalsEnum.MAIN_PRODUCT_INFO)), []);
 
   const isOpenProductInfo = useSelector((state: IRootState) => state.core[ModalsEnum.MAIN_PRODUCT_INFO]);
+  const isOpenImages = useSelector((state: IRootState) => state.core[ModalsEnum.MAIN_IMAGES]);
 
   const [isLargerThan1240] = useMediaQuery('(min-width: 1240px)');
   const [isLargerThan430] = useMediaQuery('(min-width: 430px)');
@@ -241,6 +243,7 @@ export const Main = React.memo(() => {
         </HStack>
         <Footer />
         <ModalProductInfo isOpen={!!isOpenProductInfo} productData={darkChat} />
+        <ModalImages isOpen={!!isOpenImages} productData={darkChat} />
       </VStack>
     </>
   );

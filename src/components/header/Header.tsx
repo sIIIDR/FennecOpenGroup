@@ -29,7 +29,7 @@ import {
   ROUTE_FAQ,
   ROUTE_MAINPAGE,
   ROUTE_TEAM,
-  ROUTE_VACANCY,
+  // ROUTE_VACANCY,
 } from '../../constants/routes';
 
 interface IHeaderProps {
@@ -163,8 +163,8 @@ export const Header = React.memo(({ contacts, docs, aboutUs, vacancy }: IHeaderP
                 h="55px"
                 borderBottom={vacancy ? '2px' : '0px'}
                 borderColor="brand.orange"
-                as={RouterLink}
-                to={ROUTE_VACANCY}
+                // as={RouterLink}
+                // to={ROUTE_VACANCY}
                 isDisabled={true}
               >
                 {texts.getString('vacancy', lang)}

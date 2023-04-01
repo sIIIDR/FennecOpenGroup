@@ -1,4 +1,4 @@
-import { HStack, Spacer, VStack, Text, Stack, Button, useMediaQuery } from '@chakra-ui/react';
+import { Spacer, VStack, Text, Stack, Button, useMediaQuery } from '@chakra-ui/react';
 import React, { useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import LocalizedStrings from 'react-localization';
@@ -62,7 +62,7 @@ export const FAQ = React.memo(() => {
   const myRef = useRef<HTMLDivElement>(null);
   const executeScroll = () => myRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-  const [isLargerThan890] = useMediaQuery('(min-width: 890px)');
+  const [isLargerThan1025] = useMediaQuery('(min-width: 1025px)');
 
   const [buttonHover, setButtonHover] = useState(
     Object.keys(faqTexts[lang]).map(() => {
@@ -77,11 +77,68 @@ export const FAQ = React.memo(() => {
       </Helmet>
       <VStack bgColor="brand.dark" minH={`${height}px`} justify="center">
         <Header aboutUs={true} />
-        <HStack w="full" spacing={[2, 4, 10]} pt={12} justify="center" align="top" pr={isLargerThan890 ? '15%' : '0px'}>
-          <VStack spacing={[2, 4, 6]} w={['300px', '400px', '500px', '600px', '700px']} align="start">
+        <Stack
+          direction={isLargerThan1025 ? 'row' : 'column-reverse'}
+          w="full"
+          spacing={[2, 4, 10]}
+          pt={12}
+          justify="center"
+          align={isLargerThan1025 ? 'top' : 'center'}
+          pr={isLargerThan1025 ? '15%' : '0px'}
+          px={isLargerThan1025 ? 0 : 5}
+        >
+          <VStack spacing={[2, 4, 6]} w={isLargerThan1025 ? ['500px', '600px', '700px'] : 'full'} align="start">
             <Text fontSize={['lg', 'xl', '2xl', '3xl', '4xl']} fontWeight="500" pb={6}>
               {texts.getString('faq', lang)}
             </Text>
+            {!isLargerThan1025 && (
+              <VStack
+                justify="start"
+                align="start"
+                mb={6}
+                p={2}
+                w="full"
+                border="2px"
+                borderColor="brand.orange"
+                borderRadius="15px"
+              >
+                <Text textTransform="uppercase" fontSize="xs">
+                  {texts.getString('onPage', lang)}
+                </Text>
+                {Object.keys(faqTexts[lang]).map(index => {
+                  const block = faqTexts[lang];
+                  return (
+                    <Button
+                      variant="brand.icon"
+                      key={index}
+                      color="brand.lightGray"
+                      _hover={{ color: 'brand.orange' }}
+                      fontWeight="normal"
+                      px="0px"
+                      py="0px"
+                      h="20px"
+                      onClick={executeScroll}
+                      onMouseEnter={() => {
+                        setButtonHover(
+                          Object.keys(faqTexts[lang]).map(faqindex => {
+                            return faqindex === index;
+                          }),
+                        );
+                      }}
+                      onMouseLeave={() => {
+                        setButtonHover(
+                          Object.keys(faqTexts[lang]).map(() => {
+                            return false;
+                          }),
+                        );
+                      }}
+                    >
+                      {block[index as unknown as keyof typeof block].head}
+                    </Button>
+                  );
+                })}
+              </VStack>
+            )}
             {Object.keys(faqTexts[lang]).map(index => {
               const block = faqTexts[lang];
               return (
@@ -110,8 +167,8 @@ export const FAQ = React.memo(() => {
               );
             })}
           </VStack>
-          {isLargerThan890 && (
-            <VStack justify="start" align="start">
+          {isLargerThan1025 && (
+            <VStack justify="start" align="start" mb={6} p={2} borderColor="brand.orange" borderRadius="15px">
               <Text textTransform="uppercase" fontSize="xs">
                 {texts.getString('onPage', lang)}
               </Text>
@@ -149,7 +206,7 @@ export const FAQ = React.memo(() => {
               })}
             </VStack>
           )}
-        </HStack>
+        </Stack>
         <Spacer />
         <Footer />
       </VStack>
