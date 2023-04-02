@@ -16,7 +16,7 @@ import {
 } from '@chakra-ui/react';
 import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons';
 import { FaSearchPlus } from 'react-icons/fa';
-import React, { Dispatch, useCallback, useRef, useState } from 'react';
+import React, { Dispatch, useCallback, useState } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { coreRemoveVisibleModal, coreSetVisibleModal } from '../../actions/coreActions';
@@ -35,7 +35,6 @@ export const ModalProductInfo = React.memo(({ isOpen, productData }: IModalProdu
     dispatch(coreRemoveVisibleModal(ModalsEnum.MAIN_PRODUCT_INFO));
     dispatch(coreSetVisibleModal(ModalsEnum.MAIN_IMAGES));
   }, []);
-  const iconRef = useRef<HTMLDivElement>(null);
 
   const [image, setImage] = useState(0);
 
@@ -47,30 +46,30 @@ export const ModalProductInfo = React.memo(({ isOpen, productData }: IModalProdu
         <ModalBody p={2}>
           <VStack w="full" my={[2, 4, 6, 8]} py={6}>
             <HStack w="full" h="full" align="center" justify="center">
-              <VStack>
-                <VStack ref={iconRef}>
-                  <Image
-                    src={productData.images[image]}
-                    alt="FOG"
-                    loading="lazy"
-                    w="full"
-                    h="full"
-                    htmlWidth="full"
-                    htmlHeight="full"
-                    borderRadius="20px"
-                    objectFit="cover"
-                    cursor="pointer"
-                    srcSet={`${productData.images[image]}, ${productData.images[image]}, ${productData.images[image]}`}
-                    sizes="(max-width: 300px) 300px, (max-width: 768px) 768px, 1280px"
-                  />
-                </VStack>
+              <VStack w="full" h="full" position="sticky">
+                <Image
+                  position="relative"
+                  top="0px"
+                  src={productData.images[image]}
+                  alt="FOG"
+                  loading="lazy"
+                  w="full"
+                  h="full"
+                  htmlWidth="full"
+                  htmlHeight="full"
+                  borderRadius="20px"
+                  objectFit="cover"
+                  cursor="pointer"
+                  srcSet={`${productData.images[image]}, ${productData.images[image]}, ${productData.images[image]}`}
+                  sizes="(max-width: 300px) 300px, (max-width: 768px) 768px, 1280px"
+                />
                 <Stack
                   color="transparent"
                   _hover={{ color: 'brand.orange' }}
                   position="absolute"
+                  w="full"
+                  h="full"
                   cursor="pointer"
-                  w={iconRef.current ? iconRef.current.children[0].clientWidth : 'auto'}
-                  h={iconRef.current ? iconRef.current.children[0].clientHeight : 'auto'}
                   transitionDuration="0.3s"
                   align="center"
                   justify="center"
