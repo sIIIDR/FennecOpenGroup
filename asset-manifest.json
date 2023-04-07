@@ -1,7 +1,8 @@
 {
   "files": {
     "main.css": "/FennecOpenGroup/static/css/main.4489f9d0.css",
-    "main.js": "/FennecOpenGroup/static/js/main.a96beb01.js",
+    "main.js": "/FennecOpenGroup/static/js/main.33112ebe.js",
+    "static/media/NikitaKozlov.jpg": "/FennecOpenGroup/static/media/NikitaKozlov.ce66454c78e7d50debe8.jpg",
     "static/media/DimaSerafimov.jpg": "/FennecOpenGroup/static/media/DimaSerafimov.e39262787d6080c4bb5b.jpg",
     "static/media/KirillSidorenkov.jpg": "/FennecOpenGroup/static/media/KirillSidorenkov.424cee1373eeff0ccaf8.jpg",
     "static/media/chatsModal.png": "/FennecOpenGroup/static/media/chatsModal.79b5380658eb1e96a7f1.png",
@@ -26,10 +27,10 @@
     "static/media/roboto-slab-greek-ext-400-normal.woff2": "/FennecOpenGroup/static/media/roboto-slab-greek-ext-400-normal.b32338de250af5281d8e.woff2",
     "index.html": "/FennecOpenGroup/index.html",
     "main.4489f9d0.css.map": "/FennecOpenGroup/static/css/main.4489f9d0.css.map",
-    "main.a96beb01.js.map": "/FennecOpenGroup/static/js/main.a96beb01.js.map"
+    "main.33112ebe.js.map": "/FennecOpenGroup/static/js/main.33112ebe.js.map"
   },
   "entrypoints": [
     "static/css/main.4489f9d0.css",
-    "static/js/main.a96beb01.js"
+    "static/js/main.33112ebe.js"
   ]
 }
