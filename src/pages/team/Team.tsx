@@ -11,6 +11,7 @@ import { useWindowDimensions } from '../../hooks/useWindowDimensions';
 import { IRootState } from '../../interfaces/IRootState';
 import MatrixRainingLetters from './MatrixRain';
 import DimaSerafimov from '../../assets/developers/DimaSerafimov.jpg';
+import NikitaKozlov from '../../assets/developers/NikitaKozlov.jpg';
 import MalanovAnton from '../../assets/developers/MalanovAnton.jpg';
 import KirillSidorenkov from '../../assets/developers/KirillSidorenkov.jpg';
 
@@ -130,21 +131,21 @@ export const Team = React.memo(() => {
             </VStack>
             <VStack w="full">
               <DeveloperInfo
-                src={MalanovAnton}
-                name="Малянов Антон"
-                position="Frontend web-разработчик"
-                stack={['JS', 'HTML/CSS', 'ReactJS', 'Python']}
+                src={NikitaKozlov}
+                name="Никита Козлов"
+                position="Backend-разработчик/Сис-админ"
+                stack={['Python', 'JS', 'Go', 'C++/C', 'Docker', 'PostgreSQL', 'Ruby', 'Nginx/Apache', 'MongoDB']}
                 city="Ульяновск"
                 country="Россия"
                 languages={['Русский', 'English']}
-                git="https://github.com/Serikserafim"
-                vk="https://vk.com/goldblood45"
-                telegram="https://t.me/Antonni73"
+                git="https://github.com/Gospodun"
+                vk="https://vk.com/wiesoimmerich"
+                telegram="https://t.me/wiesoimmerich"
               />
               <DeveloperInfo
                 src={DimaSerafimov}
                 name="Серафимов Дмитрий"
-                position="Frontend web-разработчик"
+                position="Frontend-разработчик"
                 stack={['C', 'JS', 'HTML/CSS', 'ReactJS', 'Python']}
                 city="Ульяновск"
                 country="Россия"
@@ -152,6 +153,18 @@ export const Team = React.memo(() => {
                 git="https://github.com/SerJPogareli"
                 vk="https://vk.com/dimaserafimov73"
                 telegram="https://t.me/Dimaserafimov"
+              />
+              <DeveloperInfo
+                src={MalanovAnton}
+                name="Малянов Антон"
+                position="Frontend-разработчик"
+                stack={['JS', 'HTML/CSS', 'ReactJS', 'Python']}
+                city="Ульяновск"
+                country="Россия"
+                languages={['Русский', 'English']}
+                git="https://github.com/Serikserafim"
+                vk="https://vk.com/goldblood45"
+                telegram="https://t.me/Antonni73"
               />
             </VStack>
           </Stack>
