@@ -51,7 +51,7 @@ export const RequestForm = React.memo(() => {
 
   const lang = useSelector((state: IRootState) => state.core.lang);
 
-  const [isLargerThan770] = useMediaQuery('(min-width: 770px)');
+  const [isLargerThan1026] = useMediaQuery('(min-width: 1026px)');
 
   const [formSended, setFormSended] = useState(false);
 
@@ -110,7 +110,7 @@ export const RequestForm = React.memo(() => {
                         id="form-name"
                         variant="brand-support"
                         fontSize={['xs', 'sm']}
-                        w={isLargerThan770 ? width / 3 : width - width / 10}
+                        w={isLargerThan1026 ? width / 2.5 : width - width / 10}
                       />
                       <InputRightElement>
                         <Fade in={!!form.errors.name}>
@@ -139,7 +139,7 @@ export const RequestForm = React.memo(() => {
                         id="form-email"
                         variant="brand-support"
                         fontSize={['xs', 'sm']}
-                        w={isLargerThan770 ? width / 3 : width - width / 10}
+                        w={isLargerThan1026 ? width / 2.5 : width - width / 10}
                       />
                       <InputRightElement>
                         <Fade in={!!form.errors.email}>
@@ -168,7 +168,7 @@ export const RequestForm = React.memo(() => {
                         id="form-company"
                         variant="brand-support"
                         fontSize={['xs', 'sm']}
-                        w={isLargerThan770 ? width / 3 : width - width / 10}
+                        w={isLargerThan1026 ? width / 2.5 : width - width / 10}
                       />
                       <InputRightElement>
                         <Fade in={!!form.errors.company}>
@@ -197,7 +197,7 @@ export const RequestForm = React.memo(() => {
                         id="form-message"
                         variant="brand-support"
                         fontSize={['xs', 'sm']}
-                        w={isLargerThan770 ? width / 3 : width - width / 10}
+                        w={isLargerThan1026 ? width / 2.5 : width - width / 10}
                         maxH="320px"
                       />
                       <InputRightElement>

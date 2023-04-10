@@ -1,5 +1,5 @@
 import { Button, ButtonGroup, Heading, Spacer, VStack, Text, useMediaQuery } from '@chakra-ui/react';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import LocalizedStrings from 'react-localization';
 import { useSelector } from 'react-redux';
@@ -11,7 +11,8 @@ import { useWindowDimensions } from '../../hooks/useWindowDimensions';
 import { IRootState } from '../../interfaces/IRootState';
 
 export const Contacts = React.memo(() => {
-  const { height, width } = useWindowDimensions();
+  const { height } = useWindowDimensions();
+  const [isLargerThan365] = useMediaQuery('(min-width: 365px)');
 
   const texts = new LocalizedStrings({
     EN: {
@@ -36,11 +37,11 @@ export const Contacts = React.memo(() => {
     },
   });
 
-  const [isLargerThan770] = useMediaQuery('(min-width: 770px)');
-
   const lang = useSelector((state: IRootState) => state.core.lang);
 
   const [active, setActive] = useState(true);
+
+  const formRef = useRef<HTMLDivElement>(null);
 
   return (
     <>
@@ -49,7 +50,7 @@ export const Contacts = React.memo(() => {
       </Helmet>
       <VStack bgColor="brand.dark" minH={`${height}px`} justify="center">
         <Header contacts={true} />
-        <VStack w={isLargerThan770 ? width / 2.6 : '100%'} px={[2, 4, 6, 8]} py={4}>
+        <VStack w={formRef.current?.clientWidth} px={isLargerThan365 ? 0 : 2} py={4}>
           <ButtonGroup isAttached border="2px" borderColor="brand.orange" size="lg" w="full" borderRadius="10px">
             <Button
               fontWeight="light"
@@ -89,7 +90,9 @@ export const Contacts = React.memo(() => {
               <Text color="brand.lightGray">{texts.getString('sponsorText', lang)}</Text>
             </VStack>
           )}
-          <RequestForm />
+          <VStack m={0} p={0} ref={formRef}>
+            <RequestForm />
+          </VStack>
         </VStack>
         <Spacer />
         <Footer />

@@ -64,7 +64,7 @@ const MatrixRainingLetters = (props) => {
 
     return (
         <React.Fragment>
-            <canvas key={keyName} className={thisClassName} ref={ref} />
+            <canvas key={keyName} className={thisClassName} ref={ref} height='1000px'/>
         </React.Fragment>
     );
 };
