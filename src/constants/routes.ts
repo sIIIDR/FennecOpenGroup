@@ -1,4 +1,4 @@
-export const ROUTE_MAINPAGE = '/';
+export const ROUTE_MAINPAGE = '/FennecOpenGroup';
 export const ROUTE_NOTFOUND = '/404';
 
 export const ROUTE_FAQ = '/faq';

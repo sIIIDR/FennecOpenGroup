@@ -126,8 +126,8 @@ export const Main = React.memo(() => {
       <Helmet>
         <title>FOG</title>
       </Helmet>
+      <Header />
       <VStack bgColor="brand.dark" minH={`${height}px`} justify="center">
-        <Header />
         <VStack w="full" spacing={[6, 8, 10, 12]}>
           <VStack w="full">
             <VStack w="full" borderBottom="2px" borderBottomColor="brand.gray" justify="center" p={[4, 6, 8, 10]}>

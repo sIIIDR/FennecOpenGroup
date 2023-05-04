@@ -22,7 +22,7 @@ import { IRootState } from '../../interfaces/IRootState';
 import { LangEnum } from '../../enums/LangEnum';
 import { coreSetLang } from '../../actions/coreActions';
 import { RootActions } from '../../types/RootActions';
-import logo from '../../assets/logo-fog.png';
+import logo from '../../assets/logo-fog.svg';
 import {
   ROUTE_CONTACTS,
   ROUTE_DOCS,
@@ -81,6 +81,8 @@ export const Header = React.memo(({ contacts, docs, aboutUs, vacancy }: IHeaderP
 
   return (
     <HStack
+      position="sticky"
+      top="0px"
       w="full"
       bgColor="brand.dark"
       borderBottom="2px"
@@ -88,8 +90,6 @@ export const Header = React.memo(({ contacts, docs, aboutUs, vacancy }: IHeaderP
       h="55px"
       px={[6, 8, 10]}
       py={[2, 4, 6]}
-      position="sticky"
-      top="0px"
       zIndex={999}
     >
       <HStack as={RouterLink} to={ROUTE_MAINPAGE} cursor="pointer">

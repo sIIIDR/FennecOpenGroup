@@ -3,8 +3,6 @@ import React from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
 
-import "./styles.css";
-
 const renderMatrix = (ref) => {
     const canvas = ref.current;
     const context = canvas.getContext("2d");
@@ -12,10 +10,6 @@ const renderMatrix = (ref) => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    // const katakana = "!@#$%^&*()/|+<>?~`";
-    // const latin = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    // const nums = "0123456789";
-    // const alphabet = katakana + latin + nums;
     const alphabet = 'FOG';
 
     const fontSize = 16;
@@ -56,15 +50,12 @@ const renderMatrix = (ref) => {
     };
 };
 
-const MatrixRainingLetters = (props) => {
+const MatrixRainingLetters = (height) => {
     const ref = useRef();
-    const keyName = "mrl-" + props.key;
-    const thisClassName = "mrl-container " + props.custom_class;
-    useEffect(() => renderMatrix(ref));
-
+    useEffect(() => renderMatrix(ref), [height]);
     return (
         <React.Fragment>
-            <canvas key={keyName} className={thisClassName} ref={ref} height='1000px'/>
+            <canvas style={{backgroundColor: 'rgba(26, 26, 26)', width: '100%', minHeight: `${height}px`, height: `${height}px`, marginTop: '0rem', padding: '0px', zIndex: '0', position: 'absolute'}} ref={ref}/>
         </React.Fragment>
     );
 };

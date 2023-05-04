@@ -14,7 +14,7 @@ import { Main as MainPage } from '../pages/main/Main';
 import { FAQ as FAQPage } from '../pages/faq/FAQ';
 import { Team as TeamPage } from '../pages/team/Team';
 import { Contacts as ContactsPage } from '../pages/contacts/Сontacts';
-// import { NotFound as NotFoundPage } from '../pages/notFound/NotFound';
+import { NotFound as NotFoundPage } from '../pages/notFound/NotFound';
 import { Vacancy as VacancyPage } from '../pages/vacancy/Vacancy';
 import { Docs as DocsPage } from '../pages/docs/Docs';
 import { store } from '../reducers/store';
@@ -29,7 +29,7 @@ export const App = () => (
         <Route key={ROUTE_CONTACTS} exact path={ROUTE_CONTACTS} component={ContactsPage} />
         <Route key={ROUTE_DOCS} exact path={ROUTE_DOCS} component={DocsPage} />
         <Route key={ROUTE_VACANCY} exact path={ROUTE_VACANCY} component={VacancyPage} />
-        <Route key={ROUTE_NOTFOUND} path="*" component={MainPage} />
+        <Route key={ROUTE_NOTFOUND} path="*" component={NotFoundPage} />
       </Switch>
     </BrowserRouter>
   </Provider>

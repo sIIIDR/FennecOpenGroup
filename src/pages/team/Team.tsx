@@ -1,5 +1,5 @@
 import { Spacer, VStack, Text, Button, Stack, useMediaQuery } from '@chakra-ui/react';
-import React from 'react';
+import React, { useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import LocalizedStrings from 'react-localization';
 import { useSelector } from 'react-redux';
@@ -48,6 +48,7 @@ export const Team = React.memo(() => {
   });
 
   const lang = useSelector((state: IRootState) => state.core.lang);
+  const pageHeidhtRef = useRef<HTMLDivElement>(null);
   const [isLargerThan1420] = useMediaQuery('(min-width: 1220px)');
 
   return (
@@ -55,9 +56,16 @@ export const Team = React.memo(() => {
       <Helmet>
         <title> FOG | {texts.getString('team', lang)}</title>
       </Helmet>
-      <VStack bgColor="brand.dark" minH={`${height}px`} maxW="full" overflowX="hidden" justify="center">
-        <Header aboutUs={true} />
-        <MatrixRainingLetters />
+      <Header aboutUs={true} />
+      <MatrixRainingLetters height={pageHeidhtRef?.current?.scrollHeight} />
+      <VStack
+        bgColor="brand.dark"
+        minH={`${height}px`}
+        maxW="full"
+        ref={pageHeidhtRef}
+        overflowX="hidden"
+        justify="center"
+      >
         <VStack zIndex={100} w="full" spacing={[2, 4]} pt={2} justify="center" align="center" px={2}>
           <VStack
             w={isLargerThan1420 ? '50%' : '100%'}
