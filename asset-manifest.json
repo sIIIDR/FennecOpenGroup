@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/FennecOpenGroup/static/css/main.daefa244.css",
-    "main.js": "/FennecOpenGroup/static/js/main.02713ec9.js",
+    "main.js": "/FennecOpenGroup/static/js/main.8b60541b.js",
     "static/media/NikitaKozlov.jpg": "/FennecOpenGroup/static/media/NikitaKozlov.ce66454c78e7d50debe8.jpg",
     "static/media/DimaSerafimov.jpg": "/FennecOpenGroup/static/media/DimaSerafimov.e39262787d6080c4bb5b.jpg",
     "static/media/KirillSidorenkov.jpg": "/FennecOpenGroup/static/media/KirillSidorenkov.424cee1373eeff0ccaf8.jpg",
@@ -28,10 +28,10 @@
     "index.html": "/FennecOpenGroup/index.html",
     "static/media/logo-fog.svg": "/FennecOpenGroup/static/media/logo-fog.17a6a3d610b0c68941cf611c82ced211.svg",
     "main.daefa244.css.map": "/FennecOpenGroup/static/css/main.daefa244.css.map",
-    "main.02713ec9.js.map": "/FennecOpenGroup/static/js/main.02713ec9.js.map"
+    "main.8b60541b.js.map": "/FennecOpenGroup/static/js/main.8b60541b.js.map"
   },
   "entrypoints": [
     "static/css/main.daefa244.css",
-    "static/js/main.02713ec9.js"
+    "static/js/main.8b60541b.js"
   ]
 }
