@@ -55,7 +55,7 @@ const MatrixRainingLetters = (height) => {
     useEffect(() => renderMatrix(ref), [height]);
     return (
         <React.Fragment>
-            <canvas style={{backgroundColor: 'rgba(26, 26, 26)', width: '100%', minHeight: `${height}px`, height: `${height}px`, marginTop: '0rem', padding: '0px', zIndex: '0', position: 'absolute'}} ref={ref}/>
+            <canvas style={{position: 'sticky', top: '0px', backgroundColor: 'rgba(26, 26, 26)', width: '100%', minHeight: `${height}px`, height: `${height}px`, marginTop: '0rem', padding: '0px', zIndex: '0'}} ref={ref}/>
         </React.Fragment>
     );
 };

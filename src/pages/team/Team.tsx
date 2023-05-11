@@ -48,7 +48,7 @@ export const Team = React.memo(() => {
   });
 
   const lang = useSelector((state: IRootState) => state.core.lang);
-  const pageHeidhtRef = useRef<HTMLDivElement>(null);
+  const pageHeightRef = useRef<HTMLDivElement>(null);
   const [isLargerThan1420] = useMediaQuery('(min-width: 1220px)');
 
   return (
@@ -57,12 +57,14 @@ export const Team = React.memo(() => {
         <title> FOG | {texts.getString('team', lang)}</title>
       </Helmet>
       <Header aboutUs={true} />
-      <MatrixRainingLetters height={pageHeidhtRef?.current?.scrollHeight} />
+      <VStack minH={`${pageHeightRef.current?.scrollHeight}px`} position="absolute" m={0} p={0}>
+        <MatrixRainingLetters height={pageHeightRef.current?.scrollHeight} />
+      </VStack>
       <VStack
         bgColor="brand.dark"
         minH={`${height}px`}
         maxW="full"
-        ref={pageHeidhtRef}
+        ref={pageHeightRef}
         overflowX="hidden"
         justify="center"
       >
