@@ -1,13 +1,16 @@
 {
   "files": {
     "main.css": "/FennecOpenGroup/static/css/main.daefa244.css",
-    "main.js": "/FennecOpenGroup/static/js/main.55556415.js",
+    "main.js": "/FennecOpenGroup/static/js/main.f545411e.js",
+    "static/media/space.mp4": "/FennecOpenGroup/static/media/space.abc737b59ddf6e98e040.mp4",
     "static/media/NikitaKozlov.jpg": "/FennecOpenGroup/static/media/NikitaKozlov.ce66454c78e7d50debe8.jpg",
     "static/media/DimaSerafimov.jpg": "/FennecOpenGroup/static/media/DimaSerafimov.e39262787d6080c4bb5b.jpg",
     "static/media/KirillSidorenkov.jpg": "/FennecOpenGroup/static/media/KirillSidorenkov.424cee1373eeff0ccaf8.jpg",
     "static/media/chatsModal.png": "/FennecOpenGroup/static/media/chatsModal.79b5380658eb1e96a7f1.png",
     "static/media/MalanovAnton.jpg": "/FennecOpenGroup/static/media/MalanovAnton.0defd6ed9f4a0988db8d.jpg",
     "static/media/chats.png": "/FennecOpenGroup/static/media/chats.ccb689905879a03ea703.png",
+    "static/media/KapustinZahar.jpg": "/FennecOpenGroup/static/media/KapustinZahar.6ed14bae59f67b3a33a7.jpg",
+    "static/media/EliseevEgor.jpg": "/FennecOpenGroup/static/media/EliseevEgor.0b71bdeba67d8325e8fb.jpg",
     "static/media/roboto-slab-all-400-normal.woff": "/FennecOpenGroup/static/media/roboto-slab-all-400-normal.97bd6f4409f61f498511.woff",
     "static/media/roboto-mono-all-400-normal.woff": "/FennecOpenGroup/static/media/roboto-mono-all-400-normal.615f3bbd43698e99d078.woff",
     "static/media/menuHover.png": "/FennecOpenGroup/static/media/menuHover.1fa4c58873a7b34e6e5e.png",
@@ -24,14 +27,15 @@
     "static/media/roboto-mono-greek-400-normal.woff2": "/FennecOpenGroup/static/media/roboto-mono-greek-400-normal.95e7a382e12921ef32ee.woff2",
     "static/media/roboto-mono-vietnamese-400-normal.woff2": "/FennecOpenGroup/static/media/roboto-mono-vietnamese-400-normal.a9575edb558363648d81.woff2",
     "static/media/roboto-slab-vietnamese-400-normal.woff2": "/FennecOpenGroup/static/media/roboto-slab-vietnamese-400-normal.0bbefed33334496975f0.woff2",
+    "static/media/mini-logo.svg": "/FennecOpenGroup/static/media/mini-logo.60842cf5d42c287f9cf22ad3e1ba1ffe.svg",
     "static/media/roboto-slab-greek-ext-400-normal.woff2": "/FennecOpenGroup/static/media/roboto-slab-greek-ext-400-normal.b32338de250af5281d8e.woff2",
     "index.html": "/FennecOpenGroup/index.html",
     "static/media/logo-fog.svg": "/FennecOpenGroup/static/media/logo-fog.17a6a3d610b0c68941cf611c82ced211.svg",
     "main.daefa244.css.map": "/FennecOpenGroup/static/css/main.daefa244.css.map",
-    "main.55556415.js.map": "/FennecOpenGroup/static/js/main.55556415.js.map"
+    "main.f545411e.js.map": "/FennecOpenGroup/static/js/main.f545411e.js.map"
   },
   "entrypoints": [
     "static/css/main.daefa244.css",
-    "static/js/main.55556415.js"
+    "static/js/main.f545411e.js"
   ]
 }
