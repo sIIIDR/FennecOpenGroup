@@ -33,7 +33,7 @@ export const Main = React.memo(() => {
   const texts = new LocalizedStrings({
     EN: {
       slogan: 'The best execution of your ideas',
-      sponsor: 'The future is foggy, but it is ours',
+      sponsor: 'Development and integration of digital solutions for business',
       ourProducts: 'Products',
       ourProductsInfo:
         'We develop our own products, our philosophy is to create innovative resources and solutions that make life easier for ordinary people and help companies and enterprises to automate routine processes, thereby increasing profits.',
@@ -60,7 +60,7 @@ export const Main = React.memo(() => {
     },
     RU: {
       slogan: 'Лучшее исполнение ваших идей',
-      sponsor: 'Будущее туманно, но оно принадлежит нам',
+      sponsor: 'Разработка и интеграция цифровых решений для бизнеса',
       ourProducts: 'Продукты',
       ourProductsInfo:
         'Мы занимаемся разработкой собственных продуктов, наша философия заключается в создании инновационных ресурсов и решений, которые облегчат жизнь как простым людям, так и помогут компаниям и предприятиям, автоматизировать рутинные процессы, тем самым увеличивая прибыль.',
@@ -140,7 +140,7 @@ export const Main = React.memo(() => {
                 <VStack
                   bgColor="black"
                   objectFit="cover"
-                  filter="brightness(35%)"
+                  filter="brightness(25%)"
                   left={0}
                   zIndex={0}
                   position="absolute"

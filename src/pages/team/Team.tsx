@@ -16,6 +16,8 @@ import MalanovAnton from '../../assets/developers/MalanovAnton.jpg';
 import KirillSidorenkov from '../../assets/developers/KirillSidorenkov.jpg';
 import KapustinZahar from '../../assets/developers/KapustinZahar.jpg';
 import EliseevEgor from '../../assets/developers/EliseevEgor.jpg';
+import Alexey from '../../assets/developers/Alexey.jpg';
+import Yakov from '../../assets/developers/Yakov.jpg';
 
 export const Team = React.memo(() => {
   const { height } = useWindowDimensions();
@@ -179,16 +181,37 @@ export const Team = React.memo(() => {
                 telegram="https://t.me/wiesoimmerich"
               />
               <DeveloperInfo
-                src={NikitaKozlov}
-                name="Козлов Никита"
-                position="Backend-разработчик/DevOps"
-                stack={['Python', 'JS', 'Go', 'C++/C', 'Docker', 'PostgreSQL', 'Ruby', 'Nginx/Apache', 'MongoDB']}
+                src={Yakov}
+                name="Яков Арханов"
+                position="Backend-разработчик"
+                stack={[
+                  'C#',
+                  'JS',
+                  'Java',
+                  'C++/C',
+                  'Maven',
+                  'Spring framework',
+                  'NET core',
+                  'React.js',
+                  'Hibernate',
+                  'Entity framework',
+                  'Docker',
+                  'Kubernates',
+                ]}
                 city="Ульяновск"
                 country="Россия"
                 languages={['Русский', 'English']}
-                git="https://github.com/Gospodun"
-                vk="https://vk.com/wiesoimmerich"
-                telegram="https://t.me/wiesoimmerich"
+                telegram="https://t.me/Zifrkoks"
+              />
+              <DeveloperInfo
+                src={Alexey}
+                name="Алексей Леонов"
+                position="Fullstack-разработчик"
+                stack={['Python', 'JS', 'jQuery', 'C++/C', 'ESP', 'IDF']}
+                city="Москва"
+                country="Россия"
+                languages={['Русский', 'English']}
+                telegram="https://t.me/ALLeoon"
               />
               <DeveloperInfo
                 src={EliseevEgor}
