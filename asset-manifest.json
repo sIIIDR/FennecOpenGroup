@@ -1,12 +1,14 @@
 {
   "files": {
     "main.css": "/FennecOpenGroup/static/css/main.daefa244.css",
-    "main.js": "/FennecOpenGroup/static/js/main.f545411e.js",
+    "main.js": "/FennecOpenGroup/static/js/main.e0eb7f26.js",
     "static/media/space.mp4": "/FennecOpenGroup/static/media/space.abc737b59ddf6e98e040.mp4",
     "static/media/NikitaKozlov.jpg": "/FennecOpenGroup/static/media/NikitaKozlov.ce66454c78e7d50debe8.jpg",
     "static/media/DimaSerafimov.jpg": "/FennecOpenGroup/static/media/DimaSerafimov.e39262787d6080c4bb5b.jpg",
     "static/media/KirillSidorenkov.jpg": "/FennecOpenGroup/static/media/KirillSidorenkov.424cee1373eeff0ccaf8.jpg",
+    "static/media/Alexey.jpg": "/FennecOpenGroup/static/media/Alexey.00af7da5b98709c2dbdb.jpg",
     "static/media/chatsModal.png": "/FennecOpenGroup/static/media/chatsModal.79b5380658eb1e96a7f1.png",
+    "static/media/Yakov.jpg": "/FennecOpenGroup/static/media/Yakov.6c1c018dcf83f9a58782.jpg",
     "static/media/MalanovAnton.jpg": "/FennecOpenGroup/static/media/MalanovAnton.0defd6ed9f4a0988db8d.jpg",
     "static/media/chats.png": "/FennecOpenGroup/static/media/chats.ccb689905879a03ea703.png",
     "static/media/KapustinZahar.jpg": "/FennecOpenGroup/static/media/KapustinZahar.6ed14bae59f67b3a33a7.jpg",
@@ -32,10 +34,10 @@
     "index.html": "/FennecOpenGroup/index.html",
     "static/media/logo-fog.svg": "/FennecOpenGroup/static/media/logo-fog.17a6a3d610b0c68941cf611c82ced211.svg",
     "main.daefa244.css.map": "/FennecOpenGroup/static/css/main.daefa244.css.map",
-    "main.f545411e.js.map": "/FennecOpenGroup/static/js/main.f545411e.js.map"
+    "main.e0eb7f26.js.map": "/FennecOpenGroup/static/js/main.e0eb7f26.js.map"
   },
   "entrypoints": [
     "static/css/main.daefa244.css",
-    "static/js/main.f545411e.js"
+    "static/js/main.e0eb7f26.js"
   ]
 }
