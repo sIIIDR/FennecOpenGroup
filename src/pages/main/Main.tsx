@@ -1,3 +1,4 @@
+/* eslint no-unsafe-optional-chaining: "error" */
 import { Heading, VStack, Text, SimpleGrid, keyframes, useMediaQuery, HStack, Spacer, Image } from '@chakra-ui/react';
 import { AddIcon } from '@chakra-ui/icons';
 import { useDispatch, useSelector } from 'react-redux';
@@ -23,10 +24,10 @@ import chatsModal from '../../assets/darkchat/chatsModal.png';
 import menu from '../../assets/darkchat/menu.png';
 import itfund from '../../assets/logo_companies/mini-logo.svg';
 import menuHover from '../../assets/darkchat/menuHover.png';
-// @ts-ignore
-import space from '../../assets/video/space.mp4';
 import { ROUTE_CONTACTS } from '../../constants/routes';
 import { ModalImages } from '../../components/modals/ModalImages';
+// @ts-ignore
+import space from '../../assets/video/space.mp4';
 
 export const Main = React.memo(() => {
   const { height } = useWindowDimensions();
@@ -96,6 +97,7 @@ export const Main = React.memo(() => {
   const isOpenImages = useSelector((state: IRootState) => state.core[ModalsEnum.MAIN_IMAGES]);
 
   const [isLargerThan1240] = useMediaQuery('(min-width: 1240px)');
+  const [isLargerThan600] = useMediaQuery('(min-width: 600px)');
   const [isLargerThan430] = useMediaQuery('(min-width: 430px)');
 
   const refHeader = useRef<HTMLDivElement>(null);
@@ -134,7 +136,7 @@ export const Main = React.memo(() => {
       <Header />
       <VStack bgColor="brand.dark" minH={`${height}px`} justify="center">
         <VStack w="full" spacing={[6, 8, 10, 12]}>
-          <VStack w="full" ref={refHeader} p={0} borderBottom="2px" borderColor="brand.gray">
+          <VStack w="full" ref={refHeader} p={0} m={0} borderBottom="2px" borderColor="brand.gray">
             <VStack w="full" justify="center" align="center" p={[4, 6, 8, 10]} m={0}>
               {refHeader.current?.clientHeight && (
                 <VStack
@@ -144,7 +146,7 @@ export const Main = React.memo(() => {
                   left={0}
                   zIndex={0}
                   position="absolute"
-                  h={`${refHeader.current?.clientHeight}`}
+                  h={`${refHeader.current?.scrollHeight}`}
                   w="full"
                   p={0}
                   m={0}
@@ -168,21 +170,24 @@ export const Main = React.memo(() => {
                 p={0}
                 m={0}
                 zIndex={2}
-                minH={isLargerThan430 ? height / 2.2 : '150px'}
+                minH={isLargerThan600 ? height / 2.5 : '150px'}
                 align="center"
                 justify="center"
               >
-                <Heading
-                  bgGradient="linear(to-l,  #e73c7e, #FA9836,   #23a6d5, #00B6EC)"
-                  as={motion.div}
-                  animation={animationNorthLight}
-                  bgClip="text"
-                  backgroundSize="400%"
-                  transform="translate3d(0, 0, 0)"
-                  fontSize={['2xl', '3xl', '4xl', '5xl', '6xl', '9xl', '9xl', '9xl']}
-                  fontWeight="extrabold"
-                >
-                  FENNEC OPEN GROUP
+                <Heading>
+                  <Text
+                    align="center"
+                    bgGradient="linear(to-l,  #e73c7e, #FA9836,   #23a6d5, #00B6EC)"
+                    as={motion.div}
+                    animation={animationNorthLight}
+                    bgClip="text"
+                    backgroundSize="400%"
+                    transform="translate3d(0, 0, 0)"
+                    fontSize={['4xl', '5xl', '6xl', '7xl', '8xl', '9xl', '9xl', '9xl']}
+                    fontWeight="extrabold"
+                  >
+                    FENNEC OPEN GROUP
+                  </Text>
                 </Heading>
                 <Text color="white" fontSize={['xs', 'sm', 'md', 'lg', 'xl']} align="center">
                   {texts.getString('slogan', lang)}

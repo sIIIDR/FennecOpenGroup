@@ -26,18 +26,12 @@ export const BlockInfo = React.memo(({ icon, logo, alt, toolTipText, fontSize, o
           justify="center"
           onClick={onClick}
           cursor="pointer"
+          as={Link}
+          href={href}
+          isExternal
         >
-          {href ? (
-            <Link href={href} isExternal>
-              {icon}
-              {logo}
-            </Link>
-          ) : (
-            <>
-              {icon}
-              {logo}
-            </>
-          )}
+          {icon}
+          {logo}
         </VStack>
       ) : (
         <VStack

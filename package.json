@@ -2,7 +2,7 @@
   "name": "fog-website",
   "version": "2.0.0",
   "license": "MIT",
-  "homepage": "FennecOpenGroup",
+  "homepage": "/",
   "private": true,
   "scripts": {
     "start": "react-scripts start",
