@@ -113,13 +113,13 @@ export const RequestForm = React.memo(() => {
                         w={isLargerThan1026 ? width / 2.5 : width - width / 10}
                       />
                       <InputRightElement>
-                        <Fade in={!!form.errors.name}>
+                        <Fade in={!!form.errors.name || !!form.values.name}>
                           {form.errors.name ? (
                             <Tooltip label={form.errors.name} placement="bottom">
-                              <NotAllowedIcon color="red.600" />
+                              <NotAllowedIcon color="red" />
                             </Tooltip>
                           ) : (
-                            <CheckIcon color="red.600" />
+                            <CheckIcon color="orange" />
                           )}
                         </Fade>
                       </InputRightElement>
@@ -142,13 +142,13 @@ export const RequestForm = React.memo(() => {
                         w={isLargerThan1026 ? width / 2.5 : width - width / 10}
                       />
                       <InputRightElement>
-                        <Fade in={!!form.errors.email}>
+                        <Fade in={!!form.errors.email || !!form.values.email}>
                           {form.errors.email ? (
                             <Tooltip label={form.errors.email} placement="bottom">
-                              <NotAllowedIcon color="red.600" />
+                              <NotAllowedIcon color="red" />
                             </Tooltip>
                           ) : (
-                            <CheckIcon color="brand.orange" />
+                            <CheckIcon color="orange" />
                           )}
                         </Fade>
                       </InputRightElement>
@@ -171,13 +171,13 @@ export const RequestForm = React.memo(() => {
                         w={isLargerThan1026 ? width / 2.5 : width - width / 10}
                       />
                       <InputRightElement>
-                        <Fade in={!!form.errors.company}>
+                        <Fade in={!!form.errors.company || !!form.values.company}>
                           {form.errors.company ? (
                             <Tooltip label={form.errors.company} placement="bottom">
-                              <NotAllowedIcon color="red.600" />
+                              <NotAllowedIcon color="red" />
                             </Tooltip>
                           ) : (
-                            <CheckIcon color="brand.orange" />
+                            <CheckIcon color="orange" />
                           )}
                         </Fade>
                       </InputRightElement>
@@ -203,7 +203,7 @@ export const RequestForm = React.memo(() => {
                       <InputRightElement>
                         <Fade in={!!form.errors.message}>
                           <Tooltip label={form.errors.message} placement="bottom">
-                            <NotAllowedIcon color="red.600" />
+                            <NotAllowedIcon color="red" />
                           </Tooltip>
                         </Fade>
                       </InputRightElement>

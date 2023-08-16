@@ -63,21 +63,25 @@ export const DeveloperInfo = React.memo(
               </HStack>
             </VStack>
             <HStack>
-              <Link href={git} isExternal>
-                <Square size="22px">
-                  <Icon as={BsGithub} boxSize="100%" color="#7a8893" _hover={{ color: 'white' }} />
-                </Square>
-              </Link>
+              {git && (
+                <Link href={git} isExternal>
+                  <Square size="22px">
+                    <Icon as={BsGithub} boxSize="100%" color="#7a8893" _hover={{ color: 'white' }} />
+                  </Square>
+                </Link>
+              )}
               <Link href={telegram} isExternal>
                 <Square size="22px">
                   <Icon as={BsTelegram} boxSize="100%" color="#7a8893" _hover={{ color: 'white' }} />
                 </Square>
               </Link>
-              <Link href={vk} isExternal>
-                <Square size="22px">
-                  <Icon as={SlSocialVkontakte} boxSize="100%" color="#7a8893" _hover={{ color: 'white' }} />
-                </Square>
-              </Link>
+              {vk && (
+                <Link href={vk} isExternal>
+                  <Square size="22px">
+                    <Icon as={SlSocialVkontakte} boxSize="100%" color="#7a8893" _hover={{ color: 'white' }} />
+                  </Square>
+                </Link>
+              )}
             </HStack>
           </VStack>
         </HStack>

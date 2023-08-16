@@ -1,19 +1,20 @@
-import { VStack, Tooltip, Heading, HStack } from '@chakra-ui/react';
+import { VStack, Tooltip, Heading, HStack, Link } from '@chakra-ui/react';
 import React, { MouseEventHandler } from 'react';
 
 interface IBlockInfoProps {
   icon?: React.ReactElement;
-  logo?: React.ReactElement;
+  logo?: string;
   alt?: any;
   fontSize?: string | string[];
   onClick?: MouseEventHandler<HTMLDivElement>;
   toolTipText?: string;
+  href?: string;
 }
 
-export const BlockInfo = React.memo(({ icon, logo, alt, toolTipText, fontSize, onClick }: IBlockInfoProps) => {
+export const BlockInfo = React.memo(({ icon, logo, alt, toolTipText, fontSize, onClick, href }: IBlockInfoProps) => {
   return (
     <Tooltip label={toolTipText}>
-      {!alt ? (
+      {alt === undefined ? (
         <VStack
           h={['80px', '100px', '130px']}
           minW="100px"
@@ -25,6 +26,9 @@ export const BlockInfo = React.memo(({ icon, logo, alt, toolTipText, fontSize, o
           justify="center"
           onClick={onClick}
           cursor="pointer"
+          as={Link}
+          href={href}
+          isExternal
         >
           {icon}
           {logo}
