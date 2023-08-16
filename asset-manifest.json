@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.067d7e63.css",
-    "main.js": "/static/js/main.51eadb1b.js",
+    "main.js": "/static/js/main.e1a6c2e8.js",
     "static/media/space.mp4": "/static/media/space.abc737b59ddf6e98e040.mp4",
     "static/media/NikitaKozlov.jpg": "/static/media/NikitaKozlov.ce66454c78e7d50debe8.jpg",
     "static/media/DimaSerafimov.jpg": "/static/media/DimaSerafimov.e39262787d6080c4bb5b.jpg",
@@ -29,15 +29,15 @@
     "static/media/roboto-mono-greek-400-normal.woff2": "/static/media/roboto-mono-greek-400-normal.95e7a382e12921ef32ee.woff2",
     "static/media/roboto-mono-vietnamese-400-normal.woff2": "/static/media/roboto-mono-vietnamese-400-normal.a9575edb558363648d81.woff2",
     "static/media/roboto-slab-vietnamese-400-normal.woff2": "/static/media/roboto-slab-vietnamese-400-normal.0bbefed33334496975f0.woff2",
+    "index.html": "/index.html",
     "static/media/mini-logo.svg": "/static/media/mini-logo.60842cf5d42c287f9cf22ad3e1ba1ffe.svg",
     "static/media/roboto-slab-greek-ext-400-normal.woff2": "/static/media/roboto-slab-greek-ext-400-normal.b32338de250af5281d8e.woff2",
-    "index.html": "/index.html",
     "static/media/logo-fog.svg": "/static/media/logo-fog.17a6a3d610b0c68941cf611c82ced211.svg",
     "main.067d7e63.css.map": "/static/css/main.067d7e63.css.map",
-    "main.51eadb1b.js.map": "/static/js/main.51eadb1b.js.map"
+    "main.e1a6c2e8.js.map": "/static/js/main.e1a6c2e8.js.map"
   },
   "entrypoints": [
     "static/css/main.067d7e63.css",
-    "static/js/main.51eadb1b.js"
+    "static/js/main.e1a6c2e8.js"
   ]
 }
