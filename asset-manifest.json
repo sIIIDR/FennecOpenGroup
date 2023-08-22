@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.067d7e63.css",
-    "main.js": "/static/js/main.e1a6c2e8.js",
+    "main.js": "/static/js/main.f524c98b.js",
     "static/media/space.mp4": "/static/media/space.abc737b59ddf6e98e040.mp4",
     "static/media/NikitaKozlov.jpg": "/static/media/NikitaKozlov.ce66454c78e7d50debe8.jpg",
     "static/media/DimaSerafimov.jpg": "/static/media/DimaSerafimov.e39262787d6080c4bb5b.jpg",
     "static/media/KirillSidorenkov.jpg": "/static/media/KirillSidorenkov.424cee1373eeff0ccaf8.jpg",
     "static/media/Alexey.jpg": "/static/media/Alexey.00af7da5b98709c2dbdb.jpg",
+    "static/media/NikitaStupin.jpg": "/static/media/NikitaStupin.613fa50190c2f7436eda.jpg",
     "static/media/chatsModal.png": "/static/media/chatsModal.79b5380658eb1e96a7f1.png",
     "static/media/Yakov.jpg": "/static/media/Yakov.6c1c018dcf83f9a58782.jpg",
     "static/media/MalanovAnton.jpg": "/static/media/MalanovAnton.0defd6ed9f4a0988db8d.jpg",
@@ -34,10 +35,10 @@
     "static/media/roboto-slab-greek-ext-400-normal.woff2": "/static/media/roboto-slab-greek-ext-400-normal.b32338de250af5281d8e.woff2",
     "static/media/logo-fog.svg": "/static/media/logo-fog.17a6a3d610b0c68941cf611c82ced211.svg",
     "main.067d7e63.css.map": "/static/css/main.067d7e63.css.map",
-    "main.e1a6c2e8.js.map": "/static/js/main.e1a6c2e8.js.map"
+    "main.f524c98b.js.map": "/static/js/main.f524c98b.js.map"
   },
   "entrypoints": [
     "static/css/main.067d7e63.css",
-    "static/js/main.e1a6c2e8.js"
+    "static/js/main.f524c98b.js"
   ]
 }
