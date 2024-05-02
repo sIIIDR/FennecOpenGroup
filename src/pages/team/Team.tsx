@@ -10,10 +10,12 @@ import { Header } from '../../components/header/Header';
 import { useWindowDimensions } from '../../hooks/useWindowDimensions';
 import { IRootState } from '../../interfaces/IRootState';
 import MatrixRainingLetters from './MatrixRain';
-import DimaSerafimov from '../../assets/developers/DimaSerafimov.jpg';
 import NikitaKozlov from '../../assets/developers/NikitaKozlov.jpg';
-import MalanovAnton from '../../assets/developers/MalanovAnton.jpg';
 import KirillSidorenkov from '../../assets/developers/KirillSidorenkov.jpg';
+import KapustinZahar from '../../assets/developers/KapustinZahar.jpg';
+import EliseevEgor from '../../assets/developers/EliseevEgor.jpg';
+import Alexey from '../../assets/developers/Alexey.jpg';
+import Yakov from '../../assets/developers/Yakov.jpg';
 
 export const Team = React.memo(() => {
   const { height } = useWindowDimensions();
@@ -25,7 +27,7 @@ export const Team = React.memo(() => {
       meetTeamText:
         'The development of all the projects is done by our team, just look at these guys, here they are from top to bottom.',
       meetTeamButton: 'I want to join you too',
-      organizers: 'Organizers and managers',
+      organizers: 'Administration and management',
       organizersText:
         'Organizing and managing large and technically complex projects is not an easy but interesting task. Thanks to competent management, you can achieve great success.',
       developers: 'Developers and engineers',
@@ -38,7 +40,7 @@ export const Team = React.memo(() => {
       meetTeamText:
         'Разработкой всех проектов занимается наша команда, только посмотрите на этих ребят, вот они сверху вниз.',
       meetTeamButton: 'Я тоже хочу к вам',
-      organizers: 'Организаторы и руководители',
+      organizers: 'Управление и менеджмент',
       organizersText:
         'Организовывать и руководить крупными и технически сложными проектами, непростая но интересная задача. Благодаря грамотному руководству, можно добиться больших успехов.',
       developers: 'Разработчики и инженеры',
@@ -119,6 +121,30 @@ export const Team = React.memo(() => {
                 vk="https://vk.com/programist3"
                 telegram="https://t.me/s_IIIDR"
               />
+              <DeveloperInfo
+                src={KapustinZahar}
+                name="Капустин Захар"
+                position="Project Manager"
+                stack={[
+                  'Agile',
+                  'Scrum',
+                  'Kanban',
+                  'Waterfall',
+                  'Jira',
+                  'Confluence',
+                  'Microsoft Project',
+                  'Team leadership',
+                  'Stakeholder management',
+                  'Risk management',
+                  'Budgeting',
+                  'Problem-solving',
+                  'Quality assurance',
+                ]}
+                city="Стамбул"
+                country="Турция"
+                languages={['Русский', 'English', 'Türkçe', '中国人。']}
+                telegram="https://t.me/BLIK666"
+              />
             </VStack>
           </Stack>
           <Stack
@@ -142,8 +168,8 @@ export const Team = React.memo(() => {
             <VStack w="full">
               <DeveloperInfo
                 src={NikitaKozlov}
-                name="Никита Козлов"
-                position="Backend-разработчик/Сис-админ"
+                name="Козлов Никита"
+                position="Backend-разработчик/DevOps"
                 stack={['Python', 'JS', 'Go', 'C++/C', 'Docker', 'PostgreSQL', 'Ruby', 'Nginx/Apache', 'MongoDB']}
                 city="Ульяновск"
                 country="Россия"
@@ -152,29 +178,50 @@ export const Team = React.memo(() => {
                 vk="https://vk.com/wiesoimmerich"
                 telegram="https://t.me/wiesoimmerich"
               />
-              <DeveloperInfo
-                src={DimaSerafimov}
-                name="Серафимов Дмитрий"
-                position="Frontend-разработчик"
-                stack={['C', 'JS', 'HTML/CSS', 'ReactJS', 'Python']}
-                city="Ульяновск"
-                country="Россия"
-                languages={['Русский', 'English', 'Deutsch']}
-                git="https://github.com/SerJPogareli"
-                vk="https://vk.com/dimaserafimov73"
-                telegram="https://t.me/Dimaserafimov"
-              />
-              <DeveloperInfo
-                src={MalanovAnton}
-                name="Малянов Антон"
-                position="Frontend-разработчик"
-                stack={['JS', 'HTML/CSS', 'ReactJS', 'Python']}
+              {/* <DeveloperInfo
+                src={Yakov}
+                name="Яков Арханов"
+                position="Backend-разработчик"
+                stack={[
+                  'C#',
+                  'JS',
+                  'Java',
+                  'C++/C',
+                  'Maven',
+                  'Spring framework',
+                  'NET core',
+                  'React.js',
+                  'Hibernate',
+                  'Entity framework',
+                  'Docker',
+                  'Kubernates',
+                ]}
                 city="Ульяновск"
                 country="Россия"
                 languages={['Русский', 'English']}
-                git="https://github.com/Serikserafim"
-                vk="https://vk.com/goldblood45"
-                telegram="https://t.me/Antonni73"
+                telegram="https://t.me/Zifrkoks"
+              /> */}
+              <DeveloperInfo
+                src={Alexey}
+                name="Алексей Леонов"
+                position="Fullstack-разработчик"
+                stack={['Python', 'JS', 'jQuery', 'C++/C', 'ESP', 'IDF']}
+                city="Москва"
+                country="Россия"
+                languages={['Русский', 'English']}
+                telegram="https://t.me/ALLeoon"
+              />
+              <DeveloperInfo
+                src={EliseevEgor}
+                name="Елисеев Егор"
+                position="Frontend-разработчик"
+                stack={['C#', 'Java', 'C/C++', 'JavaScript', 'PHP', '.NET', 'Spring', 'BackPack', 'Laravel']}
+                city="Ульяновск"
+                country="Россия"
+                languages={['Русский', 'English']}
+                git="https://github.com/ElEgEv"
+                vk="https://vk.com/id321670251"
+                telegram="https://t.me/ThreeE_74"
               />
             </VStack>
           </Stack>

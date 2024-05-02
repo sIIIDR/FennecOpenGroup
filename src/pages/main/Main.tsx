@@ -1,7 +1,8 @@
-import { Heading, VStack, Text, SimpleGrid, keyframes, useMediaQuery, HStack, Spacer } from '@chakra-ui/react';
+/* eslint no-unsafe-optional-chaining: "error" */
+import { Heading, VStack, Text, SimpleGrid, keyframes, useMediaQuery, HStack, Spacer, Image } from '@chakra-ui/react';
 import { AddIcon } from '@chakra-ui/icons';
 import { useDispatch, useSelector } from 'react-redux';
-import React, { Dispatch, useCallback } from 'react';
+import React, { Dispatch, useCallback, useRef } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import LocalizedStrings from 'react-localization';
@@ -21,16 +22,22 @@ import { IProductInfoState } from '../../interfaces/IProductInfoState';
 import chats from '../../assets/darkchat/chats.png';
 import chatsModal from '../../assets/darkchat/chatsModal.png';
 import menu from '../../assets/darkchat/menu.png';
+import itfund from '../../assets/logo_companies/mini-logo.svg';
+import gt from '../../assets/logo_companies/gt.svg';
+import ab from '../../assets/logo_companies/ab.png';
+import ldpr from '../../assets/logo_companies/ldpr.png';
 import menuHover from '../../assets/darkchat/menuHover.png';
 import { ROUTE_CONTACTS } from '../../constants/routes';
 import { ModalImages } from '../../components/modals/ModalImages';
+// @ts-ignore
+import space from '../../assets/video/space.mp4';
 
 export const Main = React.memo(() => {
   const { height } = useWindowDimensions();
   const texts = new LocalizedStrings({
     EN: {
-      slogan: 'Extreme products, for extreme conditions',
-      sponsor: 'The future is foggy, but it is ours',
+      slogan: 'The best execution of your ideas',
+      sponsor: 'Development and integration of digital solutions for business',
       ourProducts: 'Products',
       ourProductsInfo:
         'We develop our own products, our philosophy is to create innovative resources and solutions that make life easier for ordinary people and help companies and enterprises to automate routine processes, thereby increasing profits.',
@@ -56,8 +63,8 @@ export const Main = React.memo(() => {
         'Comfortable product configuration pages do not require special knowledge to configure all product capabilities. At the same time, it is allowed to limit the roles of users of products, in accordance with their status. The assistance of the website support service for configuring products is provided.',
     },
     RU: {
-      slogan: 'Экстремальные продукты, для экстремальных условий',
-      sponsor: 'Будущее туманно, но оно принадлежит нам',
+      slogan: 'Лучшее исполнение ваших идей',
+      sponsor: 'Разработка и интеграция цифровых решений для бизнеса',
       ourProducts: 'Продукты',
       ourProductsInfo:
         'Мы занимаемся разработкой собственных продуктов, наша философия заключается в создании инновационных ресурсов и решений, которые облегчат жизнь как простым людям, так и помогут компаниям и предприятиям, автоматизировать рутинные процессы, тем самым увеличивая прибыль.',
@@ -93,7 +100,10 @@ export const Main = React.memo(() => {
   const isOpenImages = useSelector((state: IRootState) => state.core[ModalsEnum.MAIN_IMAGES]);
 
   const [isLargerThan1240] = useMediaQuery('(min-width: 1240px)');
+  const [isLargerThan600] = useMediaQuery('(min-width: 600px)');
   const [isLargerThan430] = useMediaQuery('(min-width: 430px)');
+
+  const refHeader = useRef<HTMLDivElement>(null);
 
   const darkChat: IProductInfoState = {
     name: 'DARKCHAT',
@@ -129,38 +139,80 @@ export const Main = React.memo(() => {
       <Header />
       <VStack bgColor="brand.dark" minH={`${height}px`} justify="center">
         <VStack w="full" spacing={[6, 8, 10, 12]}>
-          <VStack w="full">
-            <VStack w="full" borderBottom="2px" borderBottomColor="brand.gray" justify="center" p={[4, 6, 8, 10]}>
-              <Heading
-                bgGradient="linear(to-l,  #e73c7e, #FA9836,   #23a6d5, #00B6EC)"
-                as={motion.div}
-                animation={animationNorthLight}
-                bgClip="text"
-                backgroundSize="400%"
-                transform="translate3d(0, 0, 0)"
-                fontSize={['3xl', '4xl', '5xl', '6xl', '7xl', '8xl']}
-                fontWeight="extrabold"
+          <VStack w="full" ref={refHeader} p={0} m={0} borderBottom="2px" borderColor="brand.gray">
+            <VStack w="full" justify="center" align="center" p={[4, 6, 8, 10]} m={0}>
+              {refHeader.current?.clientHeight && (
+                <VStack
+                  bgColor="black"
+                  objectFit="cover"
+                  filter="brightness(25%)"
+                  left={0}
+                  zIndex={0}
+                  position="absolute"
+                  h={`${refHeader.current?.scrollHeight}`}
+                  w="full"
+                  p={0}
+                  m={0}
+                >
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    style={{
+                      objectFit: 'cover',
+                      width: '100%',
+                      height: '100%',
+                    }}
+                  >
+                    <source src={space} type="video/mp4"></source>
+                  </video>
+                </VStack>
+              )}
+              <VStack
+                w="full"
+                p={0}
+                m={0}
+                zIndex={2}
+                minH={isLargerThan600 ? height / 2.5 : '150px'}
+                align="center"
+                justify="center"
               >
-                FENNEC OPEN GROUP
-              </Heading>
-              <Text color="brand.lightGray" fontSize={['xs', 'sm', 'md', 'lg']}>
-                {texts.getString('slogan', lang)}
-              </Text>
-            </VStack>
-            <VStack
-              w="full"
-              borderBottom="2px"
-              borderBottomColor="brand.gray"
-              justify="center"
-              px={[4, 6, 8, 10]}
-              py={[2, 4]}
-            >
-              <Text color="brand.lightGray" fontSize={['xs', 'sm', 'md', 'lg']}>
-                {texts.getString('sponsor', lang)}
-              </Text>
+                <Heading>
+                  <Text
+                    align="center"
+                    bgGradient="linear(to-l,  #e73c7e, #FA9836,   #23a6d5, #00B6EC)"
+                    as={motion.div}
+                    animation={animationNorthLight}
+                    bgClip="text"
+                    backgroundSize="400%"
+                    transform="translate3d(0, 0, 0)"
+                    fontSize={['4xl', '5xl', '6xl', '7xl', '8xl', '9xl', '9xl', '9xl']}
+                    fontWeight="extrabold"
+                  >
+                    FENNEC OPEN GROUP
+                  </Text>
+                </Heading>
+                <Text color="white" fontSize={['xs', 'sm', 'md', 'lg', 'xl']} align="center">
+                  {texts.getString('slogan', lang)}
+                </Text>
+                <Text
+                  color="brand.lightGray"
+                  fontSize={['xs', 'sm', 'md', 'lg', 'xl']}
+                  borderTop="2px"
+                  borderColor="brand.lightGray"
+                  align="center"
+                >
+                  {texts.getString('sponsor', lang)}
+                </Text>
+              </VStack>
             </VStack>
           </VStack>
-          <SimpleGrid columns={isLargerThan1240 ? 3 : 1} w={isLargerThan1240 ? '70%' : '90%'} spacing={[4, 6, 8, 10]}>
+          <SimpleGrid
+            columns={isLargerThan1240 ? 3 : 1}
+            w={isLargerThan1240 ? '70%' : '90%'}
+            spacing={[4, 6, 8, 10]}
+            zIndex={2}
+          >
             <VStack align="start" spacing={4} maxW={isLargerThan1240 ? '300px' : '1000px'}>
               <Heading fontWeight="bold" fontSize={['lg', 'xl']}>
                 {texts.getString('efficiency', lang)}
@@ -194,16 +246,16 @@ export const Main = React.memo(() => {
               <BlockInfo
                 alt={
                   <pre>{`
-      :::::::::      :::     :::::::::  :::    :::          ::::::::  :::    :::     ::: ::::::::::: 
-     :+:    :+:   :+: :+:   :+:    :+: :+:   :+:          :+:    :+: :+:    :+:   :+: :+:   :+:      
-    +:+    +:+  +:+   +:+  +:+    +:+ +:+  +:+           +:+        +:+    +:+  +:+   +:+  +:+       
-   +#+    +:+ +#++:++#++: +#++:++#:  +#++:++            +#+        +#++:++#++ +#++:++#++: +#+        
-  +#+    +#+ +#+     +#+ +#+    +#+ +#+  +#+           +#+        +#+    +#+ +#+     +#+ +#+         
- #+#    #+# #+#     #+# #+#    #+# #+#   #+#          #+#    #+# #+#    #+# #+#     #+# #+#          
-#########  ###     ### ###    ### ###    ###          ########  ###    ### ###     ### ###           
+      :::::::::      :::     :::::::::  :::    :::          ::::::::  :::    :::     ::: :::::::::::
+     :+:    :+:   :+: :+:   :+:    :+: :+:   :+:          :+:    :+: :+:    :+:   :+: :+:   :+:
+    +:+    +:+  +:+   +:+  +:+    +:+ +:+  +:+           +:+        +:+    +:+  +:+   +:+  +:+
+   +#+    +:+ +#++:++#++: +#++:++#:  +#++:++            +#+        +#++:++#++ +#++:++#++: +#+
+  +#+    +#+ +#+     +#+ +#+    +#+ +#+  +#+           +#+        +#+    +#+ +#+     +#+ +#+
+ #+#    #+# #+#     #+# #+#    #+# #+#   #+#          #+#    #+# #+#    #+# #+#     #+# #+#
+#########  ###     ### ###    ### ###    ###          ########  ###    ### ###     ### ###
         `}</pre>
                 }
-                fontSize={['3px', '3px', '3px', '4px', '6px']}
+                fontSize={['3px', '3px', '4px', '4px', '5px']}
                 onClick={handleProductInfoClick}
               />
               <BlockInfo />
@@ -215,14 +267,46 @@ export const Main = React.memo(() => {
               {texts.getString('ourProjects', lang)}
             </Heading>
             <SimpleGrid columns={isLargerThan430 ? 3 : 1} w="full" spacing="4px">
-              <BlockInfo />
-              <BlockInfo />
+              <BlockInfo
+                icon={
+                  <Image
+                    src={itfund}
+                    h={['50px', '60px', '70px', '80px', '100px']}
+                    filter="grayscale(100%) hue-rotate(90deg)"
+                  />
+                }
+                href="https://айтифонд.рус/"
+              />
+              <BlockInfo
+                icon={<Image src={gt} h={['30px', '35px', '45px']} filter="grayscale(100%) hue-rotate(90deg)" />}
+                href="https://globaltime.store/"
+              />
+              <BlockInfo
+                icon={
+                  <Image
+                    src={ab}
+                    h={['50px', '60px', '70px', '80px', '100px']}
+                    filter="grayscale(100%) hue-rotate(90deg)"
+                  />
+                }
+                href="http://t.me/APB_Magazin_Bot/Store_app"
+              />
+              <BlockInfo
+                icon={
+                  <Image
+                    src={ldpr}
+                    h={['50px', '60px', '70px', '80px', '100px']}
+                    filter="grayscale(100%) hue-rotate(90deg)"
+                  />
+                }
+                href="https://t.me/LDPR_support_bot"
+              />
               <VStack spacing={0} p={0} m={0} as={RouterLink} to={ROUTE_CONTACTS}>
                 <BlockInfo icon={<AddIcon boxSize="25px" />} toolTipText={texts.getString('douLike', lang)} />
               </VStack>
             </SimpleGrid>
           </VStack>
-          <VStack w="full" px={isLargerThan1240 ? '15%' : '5%'} spacing={4}>
+          {/* <VStack w="full" px={isLargerThan1240 ? '15%' : '5%'} spacing={4}>
             <Heading w="full" fontSize={['lg', 'xl']} alignContent="start">
               {texts.getString('ourSponsors', lang)}
             </Heading>
@@ -233,7 +317,7 @@ export const Main = React.memo(() => {
                 <BlockInfo icon={<AddIcon boxSize="25px" />} toolTipText={texts.getString('newSponsor', lang)} />
               </VStack>
             </SimpleGrid>
-          </VStack>
+          </VStack> */}
         </VStack>
         <Spacer />
         <HStack w="full" overflow="hidden" justifyContent="center" color="white" pt={6}>

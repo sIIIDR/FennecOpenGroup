@@ -4,6 +4,7 @@ export const ButtonStyles = {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+    transitionDuration: '0.3s',
     borderRadius: '5px',
     _focus: {
       shadow: 'none',
