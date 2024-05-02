@@ -10,9 +10,7 @@ import { Header } from '../../components/header/Header';
 import { useWindowDimensions } from '../../hooks/useWindowDimensions';
 import { IRootState } from '../../interfaces/IRootState';
 import MatrixRainingLetters from './MatrixRain';
-import DimaSerafimov from '../../assets/developers/DimaSerafimov.jpg';
 import NikitaKozlov from '../../assets/developers/NikitaKozlov.jpg';
-import MalanovAnton from '../../assets/developers/MalanovAnton.jpg';
 import KirillSidorenkov from '../../assets/developers/KirillSidorenkov.jpg';
 import KapustinZahar from '../../assets/developers/KapustinZahar.jpg';
 import EliseevEgor from '../../assets/developers/EliseevEgor.jpg';
@@ -224,30 +222,6 @@ export const Team = React.memo(() => {
                 git="https://github.com/ElEgEv"
                 vk="https://vk.com/id321670251"
                 telegram="https://t.me/ThreeE_74"
-              />
-              <DeveloperInfo
-                src={DimaSerafimov}
-                name="Серафимов Дмитрий"
-                position="Frontend-разработчик"
-                stack={['C', 'JS', 'HTML/CSS', 'ReactJS', 'Python']}
-                city="Ульяновск"
-                country="Россия"
-                languages={['Русский', 'English', 'Deutsch']}
-                git="https://github.com/SerJPogareli"
-                vk="https://vk.com/dimaserafimov73"
-                telegram="https://t.me/Dimaserafimov"
-              />
-              <DeveloperInfo
-                src={MalanovAnton}
-                name="Малянов Антон"
-                position="UX/UI-разработчик"
-                stack={['JS', 'HTML/CSS', 'ReactJS', 'Python']}
-                city="Ульяновск"
-                country="Россия"
-                languages={['Русский', 'English']}
-                git="https://github.com/Serikserafim"
-                vk="https://vk.com/goldblood45"
-                telegram="https://t.me/Antonni73"
               />
             </VStack>
           </Stack>

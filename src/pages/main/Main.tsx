@@ -23,6 +23,9 @@ import chats from '../../assets/darkchat/chats.png';
 import chatsModal from '../../assets/darkchat/chatsModal.png';
 import menu from '../../assets/darkchat/menu.png';
 import itfund from '../../assets/logo_companies/mini-logo.svg';
+import gt from '../../assets/logo_companies/gt.svg';
+import ab from '../../assets/logo_companies/ab.png';
+import ldpr from '../../assets/logo_companies/ldpr.png';
 import menuHover from '../../assets/darkchat/menuHover.png';
 import { ROUTE_CONTACTS } from '../../constants/routes';
 import { ModalImages } from '../../components/modals/ModalImages';
@@ -243,13 +246,13 @@ export const Main = React.memo(() => {
               <BlockInfo
                 alt={
                   <pre>{`
-      :::::::::      :::     :::::::::  :::    :::          ::::::::  :::    :::     ::: ::::::::::: 
-     :+:    :+:   :+: :+:   :+:    :+: :+:   :+:          :+:    :+: :+:    :+:   :+: :+:   :+:      
-    +:+    +:+  +:+   +:+  +:+    +:+ +:+  +:+           +:+        +:+    +:+  +:+   +:+  +:+       
-   +#+    +:+ +#++:++#++: +#++:++#:  +#++:++            +#+        +#++:++#++ +#++:++#++: +#+        
-  +#+    +#+ +#+     +#+ +#+    +#+ +#+  +#+           +#+        +#+    +#+ +#+     +#+ +#+         
- #+#    #+# #+#     #+# #+#    #+# #+#   #+#          #+#    #+# #+#    #+# #+#     #+# #+#          
-#########  ###     ### ###    ### ###    ###          ########  ###    ### ###     ### ###           
+      :::::::::      :::     :::::::::  :::    :::          ::::::::  :::    :::     ::: :::::::::::
+     :+:    :+:   :+: :+:   :+:    :+: :+:   :+:          :+:    :+: :+:    :+:   :+: :+:   :+:
+    +:+    +:+  +:+   +:+  +:+    +:+ +:+  +:+           +:+        +:+    +:+  +:+   +:+  +:+
+   +#+    +:+ +#++:++#++: +#++:++#:  +#++:++            +#+        +#++:++#++ +#++:++#++: +#+
+  +#+    +#+ +#+     +#+ +#+    +#+ +#+  +#+           +#+        +#+    +#+ +#+     +#+ +#+
+ #+#    #+# #+#     #+# #+#    #+# #+#   #+#          #+#    #+# #+#    #+# #+#     #+# #+#
+#########  ###     ### ###    ### ###    ###          ########  ###    ### ###     ### ###
         `}</pre>
                 }
                 fontSize={['3px', '3px', '4px', '4px', '5px']}
@@ -272,15 +275,38 @@ export const Main = React.memo(() => {
                     filter="grayscale(100%) hue-rotate(90deg)"
                   />
                 }
-                href="https://www.it-fund73.ru/"
+                href="https://айтифонд.рус/"
               />
-              <BlockInfo />
+              <BlockInfo
+                icon={<Image src={gt} h={['30px', '35px', '45px']} filter="grayscale(100%) hue-rotate(90deg)" />}
+                href="https://globaltime.store/"
+              />
+              <BlockInfo
+                icon={
+                  <Image
+                    src={ab}
+                    h={['50px', '60px', '70px', '80px', '100px']}
+                    filter="grayscale(100%) hue-rotate(90deg)"
+                  />
+                }
+                href="http://t.me/APB_Magazin_Bot/Store_app"
+              />
+              <BlockInfo
+                icon={
+                  <Image
+                    src={ldpr}
+                    h={['50px', '60px', '70px', '80px', '100px']}
+                    filter="grayscale(100%) hue-rotate(90deg)"
+                  />
+                }
+                href="https://t.me/LDPR_support_bot"
+              />
               <VStack spacing={0} p={0} m={0} as={RouterLink} to={ROUTE_CONTACTS}>
                 <BlockInfo icon={<AddIcon boxSize="25px" />} toolTipText={texts.getString('douLike', lang)} />
               </VStack>
             </SimpleGrid>
           </VStack>
-          <VStack w="full" px={isLargerThan1240 ? '15%' : '5%'} spacing={4}>
+          {/* <VStack w="full" px={isLargerThan1240 ? '15%' : '5%'} spacing={4}>
             <Heading w="full" fontSize={['lg', 'xl']} alignContent="start">
               {texts.getString('ourSponsors', lang)}
             </Heading>
@@ -291,7 +317,7 @@ export const Main = React.memo(() => {
                 <BlockInfo icon={<AddIcon boxSize="25px" />} toolTipText={texts.getString('newSponsor', lang)} />
               </VStack>
             </SimpleGrid>
-          </VStack>
+          </VStack> */}
         </VStack>
         <Spacer />
         <HStack w="full" overflow="hidden" justifyContent="center" color="white" pt={6}>
