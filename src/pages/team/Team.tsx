@@ -178,7 +178,7 @@ export const Team = React.memo(() => {
                 vk="https://vk.com/wiesoimmerich"
                 telegram="https://t.me/wiesoimmerich"
               />
-              <DeveloperInfo
+              {/* <DeveloperInfo
                 src={Yakov}
                 name="Яков Арханов"
                 position="Backend-разработчик"
@@ -200,7 +200,7 @@ export const Team = React.memo(() => {
                 country="Россия"
                 languages={['Русский', 'English']}
                 telegram="https://t.me/Zifrkoks"
-              />
+              /> */}
               <DeveloperInfo
                 src={Alexey}
                 name="Алексей Леонов"
